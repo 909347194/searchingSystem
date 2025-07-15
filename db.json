@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": 1001,
+      "basicInfo": {
+        "username": "zhang_san",
+        "realName": "张三",
+        "gender": "male",
+        "birthDate": "1990-05-15",
+        "avatar": "https://example.com/avatars/zhang_san.jpg",
+        "signature": "热爱生活的程序员"
+      },
+      "contactInfo": {
+        "email": "zhang_san@example.com",
+        "phone": "13812345678",
+        "address": {
+          "province": "广东省",
+          "city": "深圳市",
+          "detail": "南山区科技园某大厦15层"
+        }
+      },
+      "accountStatus": {
+        "status": "active",
+        "createdAt": "2023-01-10T08:30:00Z",
+        "updatedAt": "2024-03-20T15:45:00Z",
+        "lastLoginAt": "2024-06-01T09:12:00Z",
+        "lastLoginIp": "113.124.56.78"
+      },
+      "securitySettings": {
+        "passwordUpdatedAt": "2024-02-15T10:30:00Z",
+        "twoFactorAuth": false,
+        "loginHistory": [
+          {
+            "time": "2024-05-28T18:20:00Z",
+            "ip": "113.124.56.79",
+            "device": "Chrome/124.0"
+          },
+          {
+            "time": "2024-05-25T07:15:00Z",
+            "ip": "183.60.123.45",
+            "device": "Safari/16.5"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1002,
+      "basicInfo": {
+        "username": "li_mei",
+        "realName": "李梅",
+        "gender": "female",
+        "birthDate": "1995-08-22",
+        "avatar": "https://example.com/avatars/li_mei.jpg",
+        "signature": "设计爱好者 | 旅行博主"
+      },
+      "contactInfo": {
+        "email": "li_mei@example.com",
+        "phone": "13987654321",
+        "address": {
+          "province": "浙江省",
+          "city": "杭州市",
+          "detail": "西湖区某小区3号楼"
+        }
+      },
+      "accountStatus": {
+        "status": "active",
+        "createdAt": "2023-05-05T11:20:00Z",
+        "updatedAt": "2024-04-10T16:30:00Z",
+        "lastLoginAt": "2024-06-01T14:30:00Z",
+        "lastLoginIp": "220.181.38.90"
+      },
+      "securitySettings": {
+        "passwordUpdatedAt": "2024-04-01T16:20:00Z",
+        "twoFactorAuth": true,
+        "loginHistory": [
+          {
+            "time": "2024-05-30T20:10:00Z",
+            "ip": "220.181.38.91",
+            "device": "Firefox/125.0"
+          },
+          {
+            "time": "2024-05-29T11:05:00Z",
+            "ip": "120.234.78.90",
+            "device": "Mobile/Android"
+          }
+        ]
+      }
+    }
+  ],
+  "userSettings": [
+    {
+      "userId": 1001,
+      "notifications": {
+        "email": true,
+        "sms": false,
+        "push": true
+      },
+      "privacy": {
+        "showRealName": false,
+        "showBirthDate": false,
+        "allow陌生人Message": true
+      }
+    },
+    {
+      "userId": 1002,
+      "notifications": {
+        "email": true,
+        "sms": true,
+        "push": false
+      },
+      "privacy": {
+        "showRealName": true,
+        "showBirthDate": false,
+        "allowMessage": false
+      }
+    }
+  ],
+  "userManagement": [
+    {
+      "userId": 1001,
+      "user_name": "test_user",
+      "password": "123456",
+      "re_password": "123456",
+      "email": "li_mei@example.com"
+    },
+    {
+      "id": "54c6",
+      "username": "admin2",
+      "password": "123456"
+    }
+  ]
+}

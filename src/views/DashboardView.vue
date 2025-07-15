@@ -1,5 +1,7 @@
 <script setup>
 import Collapse from '@/components/CollapseAside.vue';
+import Query from '@/components/Query.vue';
+
 
 </script>
 <template>
@@ -12,9 +14,13 @@ import Collapse from '@/components/CollapseAside.vue';
         </el-aside>
         <el-container>
           <!-- 顶栏 -->
-          <el-header class="header">Header</el-header>
+          <el-header class="header"></el-header>
           <!-- 主栏 -->
-          <el-main class="main">Main</el-main>
+          <el-main class="main">
+            <div class="mainContainer">
+              <Query></Query>
+            </div>
+          </el-main>
         </el-container>
       </el-container>
     </div>

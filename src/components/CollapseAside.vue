@@ -60,7 +60,6 @@ import { ref } from 'vue'
 import {
     Document,
     Menu as IconMenu,
-    Location,
     Setting,
     View,
     Hide

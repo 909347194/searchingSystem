@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import RegisterForm from '@/components/RegisterForm.vue'
+import request from "@/api/index"
 
 // 路由实例
 const router = useRouter()
@@ -19,8 +20,7 @@ const showRegisterDialog = ref(false)
 const handleLogin = () => {
     console.log('登录提交:', loginForm.value)
     // 调用API进行登录验证
-    // $axios.post('/api/login', loginForm.value)
-
+    request.post("/userManagement", loginForm.value)
     // 模拟登录成功跳转
     router.push('/dashboard')
 }
