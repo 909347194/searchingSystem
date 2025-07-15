@@ -5,7 +5,7 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## 备注
 
-项目前端使用 vue3组合式API、Echarts/Openlayers、element-plus等进行构建
+项目前端使用 vue3组合式API、Echarts/Openlayers、element-plus等进行构建。https://segmentfault.com/a/1190000045383325使用Json-server模拟。db.json
 整个系统的前端界面划分为以下几个主要模块：
 
 ## 登录/注册页面
