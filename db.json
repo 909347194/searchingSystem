@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1001,
+      "id": "1001",
       "basicInfo": {
         "username": "zhang_san",
         "realName": "张三",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": 1002,
+      "id": "1002",
       "basicInfo": {
         "username": "li_mei",
         "realName": "李梅",
@@ -99,7 +99,8 @@
         "showRealName": false,
         "showBirthDate": false,
         "allow陌生人Message": true
-      }
+      },
+      "id": "9dd1"
     },
     {
       "userId": 1002,
@@ -112,7 +113,8 @@
         "showRealName": true,
         "showBirthDate": false,
         "allowMessage": false
-      }
+      },
+      "id": "b48a"
     }
   ],
   "userManagement": [
@@ -121,12 +123,148 @@
       "user_name": "test_user",
       "password": "123456",
       "re_password": "123456",
-      "email": "li_mei@example.com"
+      "email": "li_mei@example.com",
+      "id": "1f94"
     },
     {
       "id": "54c6",
       "username": "admin2",
       "password": "123456"
+    },
+    {
+      "id": "8dd5",
+      "username": "admin",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "phone": "13955278809",
+      "email": "1234567@qq.com"
+    },
+    {
+      "id": "2cfe",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "8610",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "1609",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "34c8",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "bb34",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "60bf",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "6944",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "6b99",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "1f1c",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "03d7",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13425253636",
+      "email": ""
+    },
+    {
+      "id": "6621",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13423231156",
+      "email": ""
+    },
+    {
+      "id": "9f26",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13423231156",
+      "email": ""
+    },
+    {
+      "id": "b29c",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13423231156",
+      "email": ""
+    },
+    {
+      "id": "797b",
+      "username": "admin11",
+      "password": "123123",
+      "confirmPassword": "123123",
+      "phone": "13124235678",
+      "email": ""
+    },
+    {
+      "id": "a5b9",
+      "username": "admin11",
+      "password": "123123"
+    },
+    {
+      "id": "5d86",
+      "username": "admin11",
+      "password": "123123"
+    },
+    {
+      "id": "6112",
+      "username": "",
+      "password": ""
     }
   ]
 }
