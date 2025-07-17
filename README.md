@@ -2,7 +2,20 @@
 
 基于大模型和检索增强生成（RAG）技术的系统开发项目。从你上传的图示可以看出，系统主要包括前端、后端、文档管理、查询功能、数据库、向量数据库（RAG）和 DeepSeek 接口等部分。
 This template should help get you started developing with Vue 3 in Vite.
+# 如何启动项目？
+## Project Setup
+依次运行下面的命令：
+```sh
+npm install
+```
 
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
 ## 备注
 
 项目前端使用 vue3组合式API、Echarts/Openlayers、element-plus等进行构建。https://segmentfault.com/a/1190000045383325使用Json-server模拟。db.json
@@ -51,20 +64,7 @@ This template should help get you started developing with Vue 3 in Vite.
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vite.dev/config/).
-# 如何启动项目？
-## Project Setup
-依次运行下面的命令：
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
 
 ```sh
 npm run build
