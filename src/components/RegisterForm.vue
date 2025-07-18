@@ -127,11 +127,11 @@ const handleRegister = () => {
     })
 }
 
-
+//组件上使用ref；用来向父组件暴露子组件的数据和函数
 // 定义暴露给父组件的方法（如果需要）
-defineExpose({
-    handleRegister
-})
+// defineExpose({
+//     handleRegister
+// })
 </script>
 <template>
     <div class="register-form">

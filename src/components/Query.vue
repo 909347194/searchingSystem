@@ -1,58 +1,3 @@
-<template>
-  <div class="query-container">
-    <!-- 对话历史 -->
-    <div class="chat-history" ref="chatHistory">
-      <div v-for="(message, index) in messages" :key="index" class="message-item">
-        <div :class="['message-bubble', message.isUser ? 'user-message' : 'assistant-message']">
-          <div class="message-header">
-            <span class="message-role">{{ message.isUser ? '用户' : 'AI助手' }}</span>
-            <span
-              v-if="!message.isUser"
-              class="message-typing"
-              v-show="isTyping && index === messages.length - 1"
-            ></span>
-          </div>
-          <div class="message-content">
-            {{ message.content }}
-          </div>
-        </div>
-      </div>
-
-      <!-- 无对话时的提示 -->
-      <div v-if="messages.length === 0" class="empty-tip">
-        <h3>欢迎使用大模型检索系统</h3>
-        <p>您可以提出关于系统功能、数据查询或操作指导等方面的问题</p>
-      </div>
-    </div>
-
-    <!-- 输入区域 -->
-
-    <div class="input-area">
-      <el-form @submit.prevent="handleSubmit" label-width="0">
-        <el-form-item>
-          <el-input
-            v-model="inputText"
-            placeholder="请向我提问吧！"
-            :rows="3"
-            type="textarea"
-            resize="none"
-            @keyup.enter="handleSubmit"
-          />
-        </el-form-item>
-        <el-button
-          type="primary"
-          native-type="submit"
-          class="send-button"
-          :loading="isLoading"
-          icon="document"
-        >
-          发送
-        </el-button>
-      </el-form>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 import { ElMessage } from 'element-plus'
@@ -69,7 +14,7 @@ const chatHistory = ref(null)
 const sendAIQuery = async () => {
   console.log('发送AI查询请求:', inputText.value)
   try {
-    const response = await request.get('http://192.168.9.127:9999/api/ai/query', {
+    const response = await request.get('/api/ai/query', {
       params: {
         key: inputText.value,
       },
@@ -81,7 +26,7 @@ const sendAIQuery = async () => {
     ElMessage.error('请求失败，请稍后再试')
     throw error
   }
-   
+
 }
 
 // ========== 消息发送逻辑 ==========
@@ -117,10 +62,9 @@ const sendMessage = async (content) => {
 // ========== 表单提交 ==========
 const handleSubmit = () => {
   sendMessage(inputText.value)
-    // 清空输入框
-    inputText.value = ''
-    scrollToBottom()
-
+  // 清空输入框
+  inputText.value = ''
+  scrollToBottom()
 }
 
 // ========== 页面初始化 & 滚动控制 ==========
@@ -138,13 +82,52 @@ const scrollToBottom = () => {
   })
 }
 </script>
+<template>
+  <div class="query-container">
+    <!-- 对话历史 -->
+    <div class="chat-history" ref="chatHistory">
+      <div v-for="(message, index) in messages" :key="index" class="message-item">
+        <div :class="['message-bubble', message.isUser ? 'user-message' : 'assistant-message']">
+          <div class="message-header">
+            <span class="message-role">{{ message.isUser ? '用户' : 'AI助手' }}</span>
+            <span v-if="!message.isUser" class="message-typing"
+              v-show="isTyping && index === messages.length - 1"></span>
+          </div>
+          <div class="message-content">
+            {{ message.content }}
+          </div>
+        </div>
+      </div>
+
+      <!-- 无对话时的提示 -->
+      <div v-if="messages.length === 0" class="empty-tip">
+        <h3>欢迎使用大模型检索系统</h3>
+        <p>您可以提出关于系统功能、数据查询或操作指导等方面的问题</p>
+      </div>
+    </div>
+
+    <!-- 输入区域 -->
+    <div class="input-area">
+      <el-form @submit.prevent="handleSubmit" label-width="0">
+        <el-form-item>
+          <el-input v-model="inputText" placeholder="请向我提问吧！" :rows="3" type="textarea" resize="none"
+            @keyup.enter="handleSubmit" />
+        </el-form-item>
+        <el-button type="primary" native-type="submit" class="send-button" :loading="isLoading" icon="document">
+          发送
+        </el-button>
+      </el-form>
+    </div>
+  </div>
+</template>
+
+
 
 <style scoped>
 .query-container {
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  padding: 20px;
+  height: 100%;
   background-color: #f5f7fa;
 }
 
@@ -152,7 +135,6 @@ const scrollToBottom = () => {
   flex: 1;
   overflow-y: hidden;
   margin-bottom: 20px;
-  padding: 10px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -227,6 +209,7 @@ const scrollToBottom = () => {
 }
 
 @keyframes typing {
+
   0%,
   100% {
     transform: translateY(0);

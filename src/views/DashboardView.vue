@@ -1,7 +1,6 @@
 <script setup>
 import Collapse from '@/components/CollapseAside.vue';
-import Query from '@/components/Query.vue';
-
+import { RouterView } from 'vue-router';
 
 </script>
 <template>
@@ -14,12 +13,14 @@ import Query from '@/components/Query.vue';
         </el-aside>
         <el-container>
           <!-- 顶栏 -->
-          <el-header class="header"></el-header>
+          <el-header class="header">
+            Dashboard
+            <hr>
+          </el-header>
           <!-- 主栏 -->
           <el-main class="main">
-            <div class="mainContainer">
-              <Query></Query>
-            </div>
+
+            <router-view></router-view>
           </el-main>
         </el-container>
       </el-container>
@@ -33,10 +34,34 @@ import Query from '@/components/Query.vue';
   width: 100%;
   height: 100%;
 }
-.aside,.header,.main{
+
+.aside,
+.header,
+.main {
   float: left;
 }
-.aside{
+
+.aside {
   width: auto;
+}
+
+.header,
+.main {
+  width: 100%;
+}
+
+.header {
+  height: 5vh;
+}
+
+.main {
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-style: bold;
 }
 </style>

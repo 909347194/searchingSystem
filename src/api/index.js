@@ -3,7 +3,7 @@ import axios from 'axios'
 
 //创建实例
 const Axios = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://192.168.9.127:9999',
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 })
@@ -114,3 +114,14 @@ token 过期时自动刷新并重新发送请求，提升用户体验（避免�
 防止重复刷新 token、处理刷新失败的边界情况（跳转登录）。
 
 适用于需要身份验证的前后端分离项目，是前端请求层的常见最佳实践。 */
+
+//动态配置 API 的基础 URL：
+// 在开发或部署项目时，不同的环境（如开发环境、测试环境、生产环境）通常有不同的后端接口地址。
+// 使用 VITE_API_BASE_URL 可以在不修改代码的情况下，通过配置文件或环境变量来切换这些地址。
+
+// 优先级：
+// 如果配置了 VITE_API_BASE_URL，则会使用该值作为 API 的基础 URL；
+// 如果没有配置，则使用默认值 'http://192.168.9.127:9999'。
+
+// 示例配置：
+// 通常在项目根目录的 .env 文件中进行配置，
